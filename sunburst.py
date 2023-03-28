@@ -38,6 +38,8 @@ df = pd.DataFrame(
     )
 )
 
+df = df.dropna()
+
 fig = px.sunburst(df, path=['etape1', 'etape2', 'etape3', 'etape4', 'etape5', 'etape6', 'etape7', 'etape8', 'etape9', 'etape10', 'etape11'], values='valeurs', title="Tunnel de vente V4", color=df['temps'])
 
 st.plotly_chart(fig, use_container_width=True)
